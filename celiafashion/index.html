@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Incluye los iconos de FontAwesome para las redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header fijo con banner de afiliación y menú de navegación -->
+    <header class="fixed-header">
+        <div class="affiliate-banner">
+            <span class="animate">SHEIN Afiliación</span>
+            <button id="infoButton">Más Información</button>
+        </div>
+        <!-- Menú de navegación desplegable -->
+        <nav class="fixed-menu">
+            <ul>
+                <li class="dropdown">
+                    <a href="#categorias" onclick="changeSlide(0)" class="dropbtn">Categorías</a>
+                    <div class="dropdown-content">
+                        <a href="#categoria1">Producto 1</a>
+                        <a href="#categoria2">Producto 2</a>
+                        <a href="#categoria3">Producto 3</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#novedades" onclick="changeSlide(1)" class="dropbtn">Novedades</a>
+                    <div class="dropdown-content">
+                        <a href="#novedad1">Novedad 1</a>
+                        <a href="#novedad2">Novedad 2</a>
+                        <a href="#novedad3">Novedad 3</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#envio-rapido" onclick="changeSlide(2)" class="dropbtn">Envío rápido</a>
+                    <div class="dropdown-content">
+                        <a href="#envio1">Envío 1</a>
+                        <a href="#envio2">Envío 2</a>
+                        <a href="#envio3">Envío 3</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#ofertas" onclick="changeSlide(3)" class="dropbtn">Ofertas</a>
+                    <div class="dropdown-content">
+                        <a href="#oferta1">Oferta 1</a>
+                        <a href="#oferta2">Oferta 2</a>
+                        <a href="#oferta3">Oferta 3</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#ropa-mujer" onclick="changeSlide(4)" class="dropbtn">Ropa de mujer</a>
+                    <div class="dropdown-content">
+                        <a href="#ropa1">Ropa 1</a>
+                        <a href="#ropa2">Ropa 2</a>
+                        <a href="#ropa3">Ropa 3</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="social-icons">
+                <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Contenedor del slider -->
+        <div class="slider">
+            <div class="slides">
+                <img src="img/logoshein.jpg" alt="Categorías">
+                <img src="img/productosshein.jpg" alt="Novedades">
+                <img src="img/productosshein1.png" alt="Envío rápido">
+                <img src="img/productosshein2.png.jpg" alt="Ofertas">
+                <img src="img/productosshein3.jpg" alt="Ropa de mujer">
+                <img src="img/productosshein4.jpg" alt="Ropa de mujer">
+                <img src="img/logoshein.jpg" alt="Ropa de mujer">
+                <img src="img/Captura de pantalla 2024-11-18 210356.jpg" alt="Ropa de mujer">
+            </div>
+        </div>
+        <!-- Secciones de productos -->
+        <section id="categorias" class="section">
+            <h2>Categorías</h2>
+            <div class="category-images">
+                <div class="image-container">
+                    <img src="img/conjunto3.jpg" alt="Producto 1">
+                    <img src="img/categoria33.jpg" alt="Producto 1" class="hover-img">
+                    <div class="overlay">Descripción del Producto 1</div>
+                </div>
+                <div class="image-container">
+                    <img src="img/categoria11.jpg" alt="Producto 2">
+                    <img src="img/categoria1.jpg" alt="Producto 2" class="hover-img">
+                    <div class="overlay">Descripción del Producto 2</div>
+                </div>
+                <div class="image-container">
+                    <img src="img/categoria2.jpg" alt="Producto 3">
+                    <img src="img/categoria22.jpg" alt="Producto 3" class="hover-img">
+                    <div class="overlay">Descripción del Producto 3</div>
+                </div>
+            </div>
+        </section>
+        <section id="novedades" class="section">
+            <h2>Novedades</h2>
+            <div class="category-images">
+                <div class="image-container">
+                    <img src="img/novedades.jpg" alt="Novedad 1">
+                    <img src="img/novedades1.jpg" alt="Producto 1" class="hover-img">
+                    <div class="overlay">Descripción de la Novedad 1</div>
+                </div>
+                <div class="image-container">
+                    <img src="img/novedades11jpg.jpg" alt="Novedad 2">
+                    <img src="img/novedades2.jpg" alt="Producto 2" class="hover-img">
+                    <div class="overlay">Descripción de la Novedad 2</div>
+                </div>
+                <div class="image-container">
+                    <img src="img/novedaes22.jpg" alt="Novedad 3">
+                    <img src="img/novedades.jpg" alt="Producto 3" class="hover-img">
+                    <div class="overlay">Descripción de la Novedad 3</div>
+                </div>
+            </div>
+        </section>
+        <section id="envio-rapido" class="section">
+            <h2>Envío Rápido</h2>
+            <div class="category-images">
+                <div class="image-container">
+                    <img src="img/enviorapido.jpg" alt="Envío 1">
+                    <div class="overlay">Descripción del Envío 1</div>
+                </div>
+                <div class="image-container">
+                    <img src="envio2.jpg" alt="Envío 2">
+                    <div class="overlay">Descripción del Envío 2</div>
+                </div>
+                <div class="image-container">
+                    <img src="envio3.jpg" alt="Envío 3">
+                    <div class="overlay">Descripción del Envío 3</div>
+                </div>
+            </div>
+        </section>
+        <section id="ofertas" class="section">
+            <h2>Ofertas</h2>
+            <div class="category-images">
+                <div class="image-container">
+                    <img src="img/ofertas.jpg" alt="Oferta 1">
+                    <img src="img/ofertas1.jpg" alt="Oferta 1" class="hover-img">
+                    <div class="overlay">Descripción de la Oferta 1</div>
+                </div>
+                <div class="image-container">
+                    <img src="img/ofertas12.jpg" alt="Oferta 2" width="400px" height="400px">
+                    <img src="img/ofertas2.jpg" alt="Oferta 2" class="hover-img">
+                    <div class="overlay">Descripción de la Oferta 2</div>
+                </div>
+                <div class="image-container">
+                    <img src="img/ofertas22.jpg" alt="Oferta 3">
+                    <img src="img/ofertas33.jpg" alt="Oferta 3" class="hover-img">
+                    <div class="overlay">Descripción de la Oferta 3</div>
+                </div>
+            </div>
+        </section>
+        <section id="ropa-mujer" class="section">
+            <h2>Ropa de Mujer</h2>
+            <div class="category-images">
+                <div class="image-container">
+                    <img src="img/conjunto1.jpg" alt="Ropa 1">
+                    <img src="img/conjunto.jpg" alt="Ropa 1" class="hover-img">
+                    <div class="overlay">Descripción de la Ropa 1</div>
+                </div>
+                <div class="image-container">
+                    <img src="img/conjunto3.jpg" alt="Ropa 2">
+                    <img src="img/mujer.jpg" alt="Ropa 1" class="hover-img">
+                    <div class="overlay">Descripción de la Ropa 1</div>
+                    <div class="overlay">Descripción de la Ropa 2</div>
+                </div>
+                <div class="image-container">
+                    <img src="img/ropa de niña.jpg" alt="Ropa 3">
+                    <img src="img/ropa de mujer12.jpg" alt="Producto 3" class="hover-img">
+                    <div class="overlay">Descripción de la Ropa 3</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Carrito de compra fijo en la esquina inferior derecha -->
+    <div class="shopping-cart">
+        <h3>Carrito de Compra</h3>
+        <ul id="cartItems"></ul>
+    </div>
+    <div id="infoPopup" class="hidden">
+        <p>Información adicional sobre SHEIN Afiliación.</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

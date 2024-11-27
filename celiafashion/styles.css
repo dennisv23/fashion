@@ -1,0 +1,281 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el header fijo */
+.fixed-header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    top: 0px;
+}
+
+/* Estilos para el banner de afiliación */
+.affiliate-banner {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el texto animado */
+.animate {
+    display: inline-block;
+    position: relative;
+    animation: moveSideToSide 10s linear infinite;
+}
+
+/* Keyframes para la animación de mover el texto */
+@keyframes moveSideToSide {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 100px); /* Ajusta 100px por el ancho del texto o contenedor */
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/* Estilos para el botón de información */
+#infoButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Cambia el color de fondo del botón al pasar el ratón */
+#infoButton:hover {
+    background-color: #0056b3;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilos para el pop-up de información */
+#infoPopup {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el menú fijo */
+.fixed-menu {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fixed-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.fixed-menu ul li {
+    margin: 0 15px;
+    position: relative; /* Necesario para el menú desplegable */
+}
+
+.fixed-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; /* Transición para el efecto de clic */
+}
+
+/* Efecto al tocar una opción del menú */
+.fixed-menu ul li a:active {
+    color: #007bff; /* Cambia el color al hacer clic */
+    transform: scale(0.95); /* Añade un efecto de escala al hacer clic */
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ddd;
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+.whatsapp { background-color: #25d366; }
+.facebook { background-color: #3b5998; }
+.instagram { background-color: #e4405f; }
+.tiktok { background-color: #000; }
+
+/* Estilos para el slider */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 150px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 1000px;
+    height: 150px;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para las secciones */
+.section {
+    padding: 20px;
+}
+
+.category-images {
+    display: flex;
+    gap: 15px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Estilos para las imágenes y la transición */
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s;
+}
+
+/* Ocultar la segunda imagen por defecto */
+.image-container img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/* Mostrar la segunda imagen al pasar el ratón */
+.image-container:hover img:nth-child(2) {
+    opacity: 1;
+}
+
+/* Estilos para el overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    color: #f1f1f1; /* Color del texto */
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.5s;
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Muestra el overlay al pasar el ratón */
+}
+
+.add-to-cart {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+/* Estilos para el carrito de compra */
+.shopping-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 200px;
+}
+
+.shopping-cart h3 {
+    margin-top: 0;
+}
+
+.shopping-cart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.shopping-cart li {
+    margin: 5px 0;
+}
